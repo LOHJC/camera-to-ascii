@@ -30,9 +30,9 @@ def DisplayASCII(stdscr, frame):
         for j in range(column):
             frame_value = frame[i][j]
             color_value = round(frame_value/COUNT*COLOR_COUNT)
-            # stdscr.attron(curses.color_pair(color_value))
+            stdscr.attron(curses.color_pair(color_value))
             stdscr.addstr(ASCII[frame_value])
-            # stdscr.attroff(curses.color_pair(color_value))
+            stdscr.attroff(curses.color_pair(color_value))
             # ascii_art += ASCII[frame_value]  # Get corresponding ASCII character
         ascii_art += "\n"  # Add newline after each row
         stdscr.addstr("\n")
